@@ -1,0 +1,46 @@
+#!/usr/bin/python
+import socket
+import sys
+from ClientSocket import ClientSocket
+import Tkinter
+from Tkinter import *
+from StreamViewer import StreamViewer 
+
+server_address=(sys.argv[1],int(sys.argv[2]))
+client=ClientSocket(server_address)
+
+status="INIT"
+
+root = Tkinter.Tk()
+tbk = StreamViewer(root)
+
+print "Enter your request:"
+print " 1.setup \n 2.play \n 3.pause \n 4.teardown \n"
+while True:
+    choice=raw_input()
+    if choice=='setup' and status=="INIT":
+    	status="READY"
+        client.send("setup")
+        rcvd=client.receive()
+        print '    Response received from Server:'+rcvd 
+    elif choice=='teardown':
+    	status="INIT"
+    	client.send("teardown")
+        client.close()
+        break;  
+    elif choice=='play' and status=="READY":
+    	print "Started receiving frames.."
+    	status="PLAYING"
+    	client.send("play")
+    	c=0
+    	while True:
+    		client.receive_frame(c,tbk,root)
+    		if c==599:
+    			break
+    		c+=1
+    	
+    elif choice=='pause' and status=="PLAYING":
+    	print "Receiving of frames has been paused for a while..."
+    	status="READY"
+    	client.send("pause")
+root.mainloop()
