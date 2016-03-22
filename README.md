@@ -1,5 +1,6 @@
 # Video-Streaming
 This project aims to stream the video stored at server end to the client as per its request.
+
 The entire process takes place as follows:
 
 1.Client first sends a SETUP request to the server to establish a  connection.The server records the address of the client.
