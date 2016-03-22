@@ -15,7 +15,7 @@ This project has been made using :
 
 1.PIL
 
-2.Opencv
+2.OpenCV
 
 3.Tkinter
 
