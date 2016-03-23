@@ -12,9 +12,14 @@ This project aims to stream the video stored at server end to the client as per 
 It can also stream live video to the client.Just replace the line "self.video = cv2.VideoCapture('video.mp4')"" to "self.video = cv2.VideoCapture(0)".THe video captured by your webcam will be streamed to the client.
 
 This application has been made using :
+<ul>
+<li>PIL</li>
 
-1.PIL
+<li>OpenCV</li>
 
+<<<<<<< HEAD
+<li>Tkinter</li>
+=======
 2.OpenCV
 
 3.Tkinter
@@ -26,7 +31,20 @@ Execution:
 1.SERVER END:On terminal, execute --> python server.py
 
 2.CLIENT END:On terminal ,execute --> python client.py serverAddress serverPortNo
+>>>>>>> d7d402e113aa79f20dc84c1c78910291ac28cf65
 
+<li>Python 2.7.6</li>
+</ul>
+<br><br>
+<h3>Execution:</h3>
+<ul>
+<li>SERVER END:On terminal, execute --> python server.py</li>
 
+<<<<<<< HEAD
+<li>CLIENT END:On terminal ,execute --> python client.py serverAddress serverPortNo</li>
+</ul>
+
+=======
+>>>>>>> d7d402e113aa79f20dc84c1c78910291ac28cf65
 Tested on Ubuntu 14.04 LTS
 
