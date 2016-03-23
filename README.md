@@ -29,4 +29,5 @@ This application has been made using :
 <li>CLIENT END:On terminal ,execute --> python client.py serverAddress serverPortNo</li>
 </ul>
 
-<h6>Tested on Ubuntu 14.04 LTS</h6>
+Tested on Ubuntu 14.04 LTS
+
