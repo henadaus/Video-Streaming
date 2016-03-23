@@ -20,3 +20,13 @@ This application has been made using :
 3.Tkinter
 
 4.Python 2.7.6
+
+#Execution:
+
+1.SERVER END:On terminal, execute --> python server.py
+
+2.CLIENT END:On terminal ,execute --> python client.py serverAddress serverPortNo
+
+
+
+Tested on Ubuntu 14.04 LTS
