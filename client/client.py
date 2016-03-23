@@ -53,18 +53,20 @@ class App(tk.Tk):
 
     def playFunc(self):
         
-            print "Started receiving frame..."
-            self.status="PLAYING"
-            self.client.send("play")
+        print "Started receiving frame..."
+        self.status="PLAYING"
+        self.client.send("play")
+        self.playUtil();    
+        
+    def playUtil(self):
             
+        path=self.client.receive_frame(self.c,self)
             
-            path=self.client.receive_frame(self.c,self)
-            
-            self.img=ImageTk.PhotoImage(Image.open(path))
-            self.video.configure(image=self.img)
-            self.c+=1
-            os.remove(path)
-            self.after(50, self.playFunc)
+        self.img=ImageTk.PhotoImage(Image.open(path))
+        self.video.configure(image=self.img)
+        self.c+=1
+        os.remove(path)
+        self.after(50, self.playUtil)
                 
                 
                    
