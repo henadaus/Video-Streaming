@@ -1,5 +1,6 @@
 # Video-Streaming
 This project aims to stream the video stored at server end to the client as per its request.
+
 The entire process takes place as follows:
 
 1.Client first sends a SETUP request to the server to establish a  connection.The server records the address of the client.
@@ -10,11 +11,11 @@ The entire process takes place as follows:
 
 It can also stream live video to the client.Just replace the line "self.video = cv2.VideoCapture('video.mp4')"" to "self.video = cv2.VideoCapture(0)".THe video captured by your webcam will be streamed to the client.
 
-This project has been made using :
+This application has been made using :
 
 1.PIL
 
-2.Opencv
+2.OpenCV
 
 3.Tkinter
 
