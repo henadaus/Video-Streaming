@@ -22,6 +22,7 @@ This application has been made using :
 4.Python 2.7.6
 
 <b>Execution:</b>
+First put the video you want to stream in 'server' folder.Then you also need to put the name of .mp4 video in 'camera.py'.
 
 1.SERVER END:On terminal, execute --> python server.py
 
