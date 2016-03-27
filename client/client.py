@@ -26,7 +26,7 @@ class App(tk.Tk):
         self.video.pack()
 
         self.status="INIT"
-        self.reqFile=""
+        
         self.c=0
         self.initialize()
     
@@ -40,7 +40,7 @@ class App(tk.Tk):
         if self.status=="INIT":
             self.status="READY"
             self.client.send("setup")
-            #self.client.send(self.reqFile)
+            
             rcvd=self.client.receive()
             print "     Response received from server:"+rcvd
 
