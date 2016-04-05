@@ -21,7 +21,7 @@ class VideoCamera(object):
             success, image = self.video.read()
                
             ret, jpeg = cv2.imencode('.jpeg', image)     
-            print type(jpeg.tobytes())
+            #print type(jpeg.tobytes())
             return jpeg
         else:
             return "No"   
